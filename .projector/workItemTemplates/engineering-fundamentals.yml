@@ -9,8 +9,7 @@ items:
   
   - name: Agile
     type: feature
-    description: Initial work items to set best practices and define working agreement
-      for Agile methodology within engagement
+    description: Initial work items to set best practices around Agile methodology within engagement
     acceptanceCriteria:
     - Team has scheduled agile ceremonies
     - Team has a working agreement in a well-known and accessible location
@@ -38,15 +37,31 @@ items:
   
   - name: Design Reviews
     type: feature
-    description: ''
-    acceptanceCriteria: []
+    description: Initial work items to set best practices around Design Reviews within engagement
     children:
     - name: As a dev crew, we have defined the process for conducting design reviews in the working agreement
       type: story
+      description: The process for design reviews should be documented and available to the whole team from the outset of the project.
+        This story is to explicitly document that process in the team's [working agreement](https://microsoft.github.io/code-with-engineering-playbook/agile-development/team-agreements/working-agreements/readme/)
+      acceptanceCriteria:
+      - Design review process is well-documented within the working agreement
+      - Process has been reviewed by both the Microsoft and customer team
+      - Document committed to customer repo
     - name: As a dev crew, we have standardized on a template for conducting design reviews and have a link in the developer docs
       type: story
+      description: All design reviews should follow a well-known template. If that template is not found in the [playbook](https://github.com/microsoft/code-with-engineering-playbook/tree/main/docs/design-reviews),
+        consider contributing your template back to it.
+      acceptanceCriteria:
+      - Team has decided on a template for design review documents
+      - Link to template is included in README or developer docs
+      - If playbook does not include template, contribute template back to playbook with description of why existing templates didn't meet requirements
     - name: As a dev crew, we have agreed upon and documented a location for storing design documents and artifacts so that they are available to all stakeholders
       type: story
+      description: All design artifacts should be placed in an accessible, maintainable location from the outset of the project. This story is deciding on that
+        location and documenting it for future developers
+      acceptanceCriteria:
+      - Team has agreed upon location for storing all documentation
+      - Location is documented in README or developer docs
   
   - name: Code Reviews
     type: feature
